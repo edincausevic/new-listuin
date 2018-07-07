@@ -1,0 +1,41 @@
+.mainMenu {
+  position: absolute;
+  top: 0;
+  transform: translateX(0px);
+  width: 235px;
+  background-color: $white-cl;
+  min-height: 1000px;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+  box-shadow: 1px 0px 20px rgba(0,0,0,0.08);
+  z-index: 5;
+
+  @include respond(tab-land) {
+    transform: translateX(-240px);
+  }
+
+  &__screen {
+    margin-bottom: 3.5rem;
+    position: relative;
+    height: 136px;
+  }
+
+  &__screenImg {
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  &__userMenu {
+    border-top: 2px solid $primary-bcd;
+  }
+
+  &__listuinMenu {
+    margin-top: 50px;
+    border-top: 1px solid $primary-bcd;
+  }
+
+  &__submenu { display: none; }
+}

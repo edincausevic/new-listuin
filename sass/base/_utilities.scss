@@ -1,0 +1,41 @@
+.u-clearFix { @include clearfix; }
+.u-right { float: right; }
+.u-left { float: left; }
+.u-show-o { opacity: 1!important; }
+.u-hide { display: none; }
+.u-show { display: block; }
+.u-rel { position: relative; }
+
+// logo correction
+.u-menuLogo {
+  position: relative;
+  top: 5px;
+  left: -13px;
+  display: none;
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+}
+.u-acc-logo {
+  margin-top: 9px;
+  margin-left: 13px;
+}
+
+.u-container {
+  background-color: $white-cl;
+  box-shadow: $box-shadow;
+  padding-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.showOnPort {
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.u-col-blue {
+  background: $fourth-cl;
+  color: $white-cl;
+}

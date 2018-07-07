@@ -1,0 +1,35 @@
+
+// COLORS
+
+$white-cl: #ffffff;
+$white-bc: #ffffff;
+$black-cl: #000000;
+$black-bc: #000000;
+$green-cl: #46bf8c;
+$red-cl: #f86868;
+$blue-cl: #48b0f7;
+
+$primary-cl: #414141;
+$secondary-cl: $red-cl;
+$third-cl: $green-cl;
+$fourth-cl: $blue-cl;
+$error-cl: red;
+
+$primary-bcsl: #fafafa;
+$primary-bcl: $white-bc;
+$primary-bc: $white-bc;
+$primary-bcd: #f6f6f6; //#f2f6f9;
+
+
+// FONTS
+
+$primary-font: 'Poppins', sans-serif;
+$default-fs: 10px;
+
+$normal-fs: 1.6rem;
+
+
+// SHADOW
+
+$box-shadow: 0px 0px 6px -2px rgba(105, 105, 105, 0.75);
+$droppable-menu-shadow: -1px 3px 2px #cfcdcd;

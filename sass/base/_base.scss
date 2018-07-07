@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body {
+  color: $primary-cl;
+  background-color: $primary-bcsl;
+  box-sizing: border-box;
+}
+
+*:focus { outline: none; }
+ul { list-style: none; }
+a { text-decoration: none; }
+
+.wrap{ 
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.row { 
+  margin: 0px 20px; 
+  @include respond(tab-land) { margin: 0px 15px; }
+}

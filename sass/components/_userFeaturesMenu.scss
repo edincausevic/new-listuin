@@ -1,0 +1,35 @@
+.userFM {
+  margin-top: 0.5rem;
+  margin-bottom: 15px;
+
+  @include respond(tab-port) {
+    margin-bottom: 7px;
+  }
+
+  &__icon {
+    padding: 1rem;
+    border-radius: 50px;
+    margin-top: .6rem;
+    margin-right: .7rem;
+
+    @include respond(tab-port) {
+      margin: 0;
+    }
+  }
+
+  &__textBox {
+    width: 63%;
+    margin-top: 3px;
+    float: right;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+  }
+}

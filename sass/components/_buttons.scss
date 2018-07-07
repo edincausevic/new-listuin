@@ -1,0 +1,156 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  color: $primary-cl;
+  transition: background-color .2s ease-in-out;
+  
+  &--nav {
+    padding: 16px;
+    display: inline-block;
+    border-left: 1px solid $primary-bcd;
+    display: block;
+    float: left;
+
+    &:hover {
+      background-color: darken($primary-bc, 2%);
+    }
+  }
+
+  &--mobMenu { 
+    padding: 20px;
+    display: none; 
+
+    @include respond(tab-land) {
+      display: inline-block; 
+    }
+  }
+
+  &--icon {
+    background: $green-cl;
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+    color: $white-cl;
+  }
+
+  &--breadcrumb {
+    color: $primary-cl;
+    font-size: 14px;
+    transition: text-decoration 0.2s ease-in-out;
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--fadeText {
+    color: lighten($primary-cl, 25%);
+  }
+
+  &--menu {
+    padding: 1.5rem;
+    border-bottom: 1px solid darken($primary-bc, 3%);
+    display: block;
+    
+    &:hover {
+      background-color: darken($primary-bc, 2%);
+    }
+
+    &-active {
+      background-color: $primary-bcd;
+
+      &:hover { background-color: $primary-bcd; }
+    }
+  }
+
+  &--submenu {
+    padding: 12px 40px;
+    display: block;
+    border-bottom: 1px solid darken($primary-bc, 10%);
+    background-color: $primary-bcd;
+    color: lighten($primary-cl, 30%);
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: lighten($primary-bcd, 2%);
+    }
+
+    &-active {
+      color: $primary-cl;
+    }
+  }
+
+  &--singin {
+    padding: 16px 42px 16px 33px;
+  }
+
+  &--main {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    background: $secondary-cl;
+    color: $white-cl;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover { background-color: darken($secondary-cl, 3%); }
+    &:active { background-color: lighten($secondary-cl, 5%); }
+  }
+
+  &--text {
+    color: $secondary-cl;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  &__container {
+    margin: 19px 0;
+  }
+
+  &--dropdown {
+    color: $primary-bc;
+    display: block;
+    padding: 10px 60px;
+    border-bottom: 1px solid lighten($primary-cl, 5%);
+
+    &:hover {
+      background: lighten($primary-cl, 3%);
+    }
+
+    &-active {
+      color: $white-cl;
+      background: $primary-cl;
+
+      &:hover {
+        color: $white-cl;
+        background: $primary-cl;
+      }
+    }
+  }
+
+  &--userFM {
+    padding: 1.5rem;
+    display: inline-block;
+    width: 210px;
+    margin-right: 2.5rem;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    
+    @include respond(tab-port) {
+      width: unset;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+  }
+
+  // COLORS
+  &--blue { @include dyeMenuItem($fourth-cl); }
+  &--red { @include dyeMenuItem($secondary-cl); }
+  &--green { @include dyeMenuItem($third-cl); }
+
+ 
+}

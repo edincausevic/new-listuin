@@ -1,0 +1,124 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin dyeMenuItem($col) {
+    border: 1px solid darken($col, 5%);
+    background: $col;
+    color: $white-cl;
+
+    &:hover {
+      background: darken($col, 12%);
+      border: 1px solid lighten($col, 5%);
+    }
+
+    &:active {
+      background: darken($col, 12%);
+    }
+
+    .fa {background: darken($col, 12%);}
+}
+
+@mixin styleMenuEl($col) {
+    background: $col;
+    position: relative;
+    border-bottom: 1px solid lighten($col, 23%);
+    
+    &__link {
+        display: block;
+        padding: 1rem 1.5rem;
+        color: $white-cl;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background: lighten($col, 3%);
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 1.3rem;
+    }
+
+    &__menuIcon {
+        position: absolute;
+        right: -2px;
+        top: 0px;
+        padding: 1.5rem;
+        color: $white-cl;
+        z-index: 2;
+
+        &:hover {
+            background: lighten($col, 3%);
+        }
+    }
+}
+
+@mixin addMenuElForm($col) {
+    width: 100%;
+
+    &__form {
+        background: darken($white-cl, 3%);
+        border-radius: 2px;
+        padding: 1rem;
+        position: relative;
+    }
+
+    &__input {
+        width: 70%;
+    }
+
+    &__btn {
+        padding: 6px 8px 6px 18px;
+        border-left: 2px solid #48b0f7;
+        transition: color .2s ease-in-out;
+        float: right;
+    }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content };    //600px
+  }
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) { @content };     //900px
+  }
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) { @content };    //1200px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content };    //1800
+  }
+}

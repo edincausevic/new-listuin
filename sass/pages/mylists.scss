@@ -1,0 +1,60 @@
+.myLists {
+  padding: 0;
+
+  &__title {
+    border-bottom: 1px solid $primary-bcd;
+    padding: 7px 16px;
+    background: $fourth-cl;
+    color: $white-cl;
+  }
+
+  &__list {
+    margin-top: 4rem;
+  }
+
+  &__aside {
+    width: 27%;
+  }
+
+  &__menuListItems {
+    margin-top: 4rem;
+  }
+}
+
+.menuListItem{
+  @include styleMenuEl($fourth-cl);
+}
+
+.addMenu {
+  @include addMenuElForm($fourth-cl);
+}
+
+.addItem {
+  width: 70%;
+
+  &__form {
+    border-radius: 2px;
+    background: darken($white-cl, 3%);
+    padding: 1rem;
+
+    &-title {
+      width: 50%;
+      padding-right: 7px;
+    }
+
+    &-url {
+      width: 40%;
+    }
+  }
+
+  &__btn {
+    padding: 6px 8px 6px 18px;
+    border-left: 2px solid $fourth-cl;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: lighten($fourth-cl, 3%);
+    }
+  }
+  
+}

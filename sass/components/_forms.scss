@@ -1,0 +1,54 @@
+.form {
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid darken($primary-bcsl, 5%);
+    background: $primary-bcsl;
+    font-size: 13px;
+
+    &:focus {
+      border: 1px solid darken($primary-bcsl, 15%);
+    }
+
+    &::placeholder {
+      color: lighten($primary-cl, 40%);
+    }
+
+    &-success {
+      position: absolute;
+      top: 11px;
+      right: 9px;
+      color: $third-cl;
+    }
+
+    &-error {
+      color: $error-cl;
+      font-size: 9px;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 1;
+    }
+  }
+
+  &__group {
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  &__error {
+    color: $error-cl;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  &__data {
+    margin: 18px 15%;
+    font-size: 13px;
+    text-align: center;
+    color: lighten($primary-cl, 40%);
+  }
+}

@@ -1,0 +1,22 @@
+.listItem {
+  cursor: pointer;
+  color: $primary-cl;
+  background: $primary-bcd;
+  border-bottom: 1px solid darken($primary-bcd, 5%);
+  padding: 10px 8px 10px 13px;
+  display: block;
+  font-size: 1.4rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: lighten($primary-bcd, 1%);
+  }
+  
+  &__plas {
+    font-size: 1.2rem;
+  }
+
+  &__data {
+    float: right;
+  }
+}

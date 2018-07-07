@@ -1,0 +1,13 @@
+.input {
+  width: 100%;
+  border: none;
+  padding: 5px 8px;
+
+  &--col1 {
+    background-color: $fourth-cl;
+    
+    &::placeholder {
+      color: $white-cl;
+    }
+  }
+}

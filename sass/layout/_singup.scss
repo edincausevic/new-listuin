@@ -1,0 +1,35 @@
+.singup {
+  @include center;
+  width: 350px;
+
+  @include respond(phone) {
+    position: inherit;
+    top: unset;
+    left: unset;
+    transform: translate(0);
+    width: 100%;
+    margin-top: 25px;
+    padding: 9px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 27px;
+  }
+
+  &__container {
+    padding: 4rem;
+
+    &-plus {
+      padding: 2rem;
+      font-size: 13px;
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__form {
+    margin-top: 3rem;
+  }
+}
